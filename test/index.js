@@ -123,7 +123,7 @@ describe('Handlebars renderer tests', function() {
   // });
   //
   it('partials test', function() {
-    const source = 'Hello, {{> _partial/the-partial}}!';
+    const source = 'Hello, {{> _partial/the-partial }}!';
     // const source = 'Hello, {{name}}!';
     const result = render({text: source, path: 'test/main', rootPath: 'test'}, {
       name: 'handlebars'
