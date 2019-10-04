@@ -1,6 +1,6 @@
 {
-  "name": "hexo-renderer-handlebars13",
-  "version": "0.0.1",
+  "name": "hexo-renderer-hbars",
+  "version": "0.0.2",
   "description": "Handlebars renderer plugin for hexo",
   "main": "index.js",
   "scripts": {

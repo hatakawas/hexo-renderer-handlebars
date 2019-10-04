@@ -13,7 +13,6 @@ describe('Handlebars renderer tests', function() {
 
   it('escaped variable test', function() {
     const source = 'Hello, {{name}}!';
-
     const result = render({text: source}, {
       name: 'handlebars'
     });
@@ -123,11 +122,12 @@ describe('Handlebars renderer tests', function() {
   //   }).should.eql('Hello world!');
   // });
   //
-  // it('partials test', function () {
-  //   var body = [
-  //     'Hello {{> _partial/test-partial }}!'
-  //   ].join('\n')
-  //
-  //   r({text: body, path: 'test/test.mustache'}).should.eql('Hello world!')
-  // })
+  it('partials test', function() {
+    const source = 'Hello, {{> _partial/the-partial}}!';
+    // const source = 'Hello, {{name}}!';
+    const result = render({text: source, path: 'test/main', rootPath: 'test'}, {
+      name: 'handlebars'
+    });
+    assert.equal(result, 'Hello, handlebars!');
+  });
 });
