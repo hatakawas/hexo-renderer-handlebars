@@ -16,3 +16,5 @@ script:
 after_script:
   - npm install coveralls
   - nyc report --reporter=text-lcov | coveralls
+
+dist: trusty
